@@ -68,28 +68,30 @@
 
 ## Установка
 
-### Вариант 1: Клонирование репозитория
+### Вариант 1: Готовый исполняемый файл (рекомендуется)
 
-```bash
-git clone <url>
-cd insales-to-woo
-pip install -r requirements.txt
-```
+Скачайте готовый бинарник — Python устанавливать не нужно:
 
-### Вариант 2: Скачивание архива
+**https://github.com/chubuk/insales-to-woo/releases/latest**
 
-1. Скачайте ZIP-архив проекта
+| Файл | Система | Как запустить |
+|---|---|---|
+| `migrate-linux.zip` | Linux | `unzip migrate-linux.zip && chmod +x migrate && ./migrate` |
+| `migrate-macos.zip` | macOS | `unzip migrate-macos.zip && chmod +x migrate && ./migrate` |
+| `migrate-windows.exe.zip` | Windows | Распакуйте и запустите `migrate.exe` двойным кликом |
+
+### Вариант 2: Из исходников (для разработчиков)
+
+1. Скачайте ZIP-архив: на странице проекта нажмите зелёную кнопку **<> Code** → **Download ZIP**
+   Или по ссылке: https://github.com/chubuk/insales-to-woo/archive/refs/heads/master.zip
 2. Распакуйте в любую папку
 3. Установите зависимости:
 
 ```bash
 cd insales-to-woo
 pip install -r requirements.txt
+python3 migrate.py
 ```
-
-### Вариант 3: Готовый исполняемый файл
-
-Скачайте собранный бинарник из раздела **Releases** GitHub-репозитория. Python устанавливать не нужно.
 
 ---
 
