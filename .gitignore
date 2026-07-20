@@ -1,0 +1,7 @@
+config.py
+output/
+__pycache__/
+*.pyc
+dist/
+build/
+.mimocode/
