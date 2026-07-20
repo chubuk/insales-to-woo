@@ -23,35 +23,35 @@ from migrate import (
 def test_parse_full_block():
     block = """экспорт товаров
 Идентификатор
-79f3d62dcddec08763ce2e4b1702f2c4
+1234567890abcdef1234567890abcdef
 Пароль
-72236c31baba7f835dc0ee51c343a794
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 Формат URL
 http://apikey:password@hostname/admin/resource.json
 Пример URL
-https://79f3d62dcddec08763ce2e4b1702f2c4:72236c31baba7f835dc0ee51c343a794@myshop-bqr991.myinsales.ru/admin/orders.json
+https://1234567890abcdef1234567890abcdef:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@my-example-shop.myinsales.ru/admin/orders.json
 Дата подключения
 20.07.2026"""
     result = parse_insales_input(block)
     assert result is not None
-    assert result["shop"] == "myshop-bqr991.myinsales.ru"
-    assert result["api_id"] == "79f3d62dcddec08763ce2e4b1702f2c4"
-    assert result["api_password"] == "72236c31baba7f835dc0ee51c343a794"
+    assert result["shop"] == "my-example-shop.myinsales.ru"
+    assert result["api_id"] == "1234567890abcdef1234567890abcdef"
+    assert result["api_password"] == "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 
 def test_parse_url_only():
-    url = "https://79f3d62dcddec08763ce2e4b1702f2c4:72236c31baba7f835dc0ee51c343a794@myshop-bqr991.myinsales.ru/admin/orders.json"
+    url = "https://1234567890abcdef1234567890abcdef:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@my-example-shop.myinsales.ru/admin/orders.json"
     result = parse_insales_input(url)
     assert result is not None
-    assert result["shop"] == "myshop-bqr991.myinsales.ru"
+    assert result["shop"] == "my-example-shop.myinsales.ru"
 
 
 def test_parse_id_and_password_only():
-    creds = "Идентификатор\n79f3d62dcddec08763ce2e4b1702f2c4\nПароль\n72236c31baba7f835dc0ee51c343a794"
+    creds = "Идентификатор\n1234567890abcdef1234567890abcdef\nПароль\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     result = parse_insales_input(creds)
     assert result is not None
     assert result["shop"] is None
-    assert result["api_id"] == "79f3d62dcddec08763ce2e4b1702f2c4"
+    assert result["api_id"] == "1234567890abcdef1234567890abcdef"
 
 
 def test_parse_empty():

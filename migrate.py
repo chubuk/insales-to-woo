@@ -41,9 +41,9 @@ SETUP_BANNER = """
 
     экспорт товаров
     Идентификатор
-    79f3d62dcddec08763ce2e4b1702f2c4
+    1234567890abcdef1234567890abcdef
     Пароль
-    72236c31baba7f835dc0ee51c343a794
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     Формат URL
     http://apikey:password@hostname/admin/resource.json
     Пример URL
@@ -53,14 +53,14 @@ SETUP_BANNER = """
 
   Способ 2 — Только Пример URL:
 
-    https://79f3d62dcddec08763ce2e4b1702f2c4:72236c31baba7f835dc0ee51c343a794@myshop.myinsales.ru/admin/orders.json
+    https://1234567890abcdef1234567890abcdef:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@myshop.myinsales.ru/admin/orders.json
 
   Способ 3 — Идентификатор + Пароль (домен спросим):
 
     Идентификатор
-    79f3d62dcddec08763ce2e4b1702f2c4
+    1234567890abcdef1234567890abcdef
     Пароль
-    72236c31baba7f835dc0ee51c343a794
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 Вставьте данные ниже (завершите пустой строкой):
 """
@@ -229,9 +229,9 @@ def setup_wizard():
             print("  ─────────────────────────────────────────────────────────")
             print("    экспорт товаров")
             print("    Идентификатор")
-            print("    79f3d62dcddec08763ce2e4b1702f2c4")
+            print("    1234567890abcdef1234567890abcdef")
             print("    Пароль")
-            print("    72236c31baba7f835dc0ee51c343a794")
+            print("    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             print("    Формат URL")
             print("    http://apikey:password@hostname/admin/resource.json")
             print("    Пример URL")

@@ -1,5 +1,5 @@
 # Ваш домен магазина (БЕЗ http:// и слэша на конце)
-# Например: myshop-bqr991.myinsales.ru
+# Например: my-example-shop.myinsales.ru
 SHOP = "your-shop.myinsales.ru"
 
 # Идентификатор и пароль API — из панели InSales: Расширения → Разработчикам

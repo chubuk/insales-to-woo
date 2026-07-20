@@ -121,26 +121,26 @@ pip install -r requirements.txt
 ```
 экспорт товаров
 Идентификатор
-79f3d62dcddec08763ce2e4b1702f2c4
+YOUR_API_ID_HERE
 Пароль
-72236c31baba7f835dc0ee51c343a794
+YOUR_API_PASSWORD_HERE
 Формат URL
 http://apikey:password@hostname/admin/resource.json
 Пример URL
-https://79f3d62d...:72236c...@myshop.myinsales.ru/admin/orders.json
+https://YOUR_API_ID...:YOUR_API_PASS...@your-shop.myinsales.ru/admin/orders.json
 ```
 
 **Формат 2 — Только URL:**
 ```
-https://79f3d62dcddec08763ce2e4b1702f2c4:72236c31baba7f835dc0ee51c343a794@myshop.myinsales.ru/admin/orders.json
+https://YOUR_API_ID_HERE:YOUR_API_PASSWORD_HERE@myshop.myinsales.ru/admin/orders.json
 ```
 
 **Формат 3 — Идентификатор + Пароль (домен спросит программа):**
 ```
 Идентификатор
-79f3d62dcddec08763ce2e4b1702f2c4
+YOUR_API_ID_HERE
 Пароль
-72236c31baba7f835dc0ee51c343a794
+YOUR_API_PASSWORD_HERE
 ```
 
 После ввода программа проверит подключение и создаст файл `config.py` автоматически.
@@ -151,9 +151,9 @@ https://79f3d62dcddec08763ce2e4b1702f2c4:72236c31baba7f835dc0ee51c343a794@myshop
 2. Откройте `config.py` и вставьте данные:
 
 ```python
-SHOP = "myshop-bqr991.myinsales.ru"
-API_ID = "79f3d62dcddec08763ce2e4b1702f2c4"
-API_PASSWORD = "72236c31baba7f835dc0ee51c343a794"
+SHOP = "your-shop-name.myinsales.ru"
+API_ID = "YOUR_API_ID_HERE"
+API_PASSWORD = "YOUR_API_PASSWORD_HERE"
 PER_PAGE = 250
 ```
 
@@ -179,7 +179,7 @@ python3 migrate.py
 ============================================================
 Миграция InSales → WooCommerce
 ============================================================
-Магазин: myshop-bqr991.myinsales.ru
+Магазин: your-shop-name.myinsales.ru
 Размер пакета: 10
 
 [1/3] Загрузка категорий...
