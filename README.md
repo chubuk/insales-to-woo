@@ -222,7 +222,7 @@ python3 migrate.py
 3. Нажмите **Import**
 4. Выберите файл `output/products.csv`
 5. Нажмите **Continue**
-6. Проверьте маппинг колонок (обычно определяется автоматически)
+6. Проверьте соответствие колонок (обычно определяется автоматически)
 7. Нажмите **Run the Importer**
 8. Дождитесь завершения
 
@@ -232,7 +232,7 @@ python3 migrate.py
 
 ## Сборка исполняемого файла
 
-Для создания standalone-бинарника (без необходимости устанавливать Python):
+Для создания автономного исполняемого файла (без необходимости устанавливать Python):
 
 ```bash
 pip install -r requirements-build.txt
@@ -243,7 +243,7 @@ pyinstaller migrate.spec
 
 ### Автоматическая сборка через GitHub Actions
 
-При пуше тега `v*` (например, `v1.0.0`) GitHub Actions автоматически соберёт бинарники для:
+При пуше (git push) тега `v*` (например, `v1.0.0`) GitHub Actions автоматически соберёт бинарники для:
 - **Windows** → `migrate-windows.exe`
 - **macOS** → `migrate-macos`
 - **Linux** → `migrate-linux`
@@ -309,7 +309,7 @@ insales-to-woo/
 | `sku` | `SKU` |
 | `price` | `Regular price` |
 | `quantity` | `Stock` |
-| `category_id` | `Categories` (через маппинг) |
+| `category_id` | `Categories` (автоматически) |
 | `variants[].title` | `Attribute N name/value(s)` |
 | `images[].url` | `Images` |
 
@@ -340,7 +340,7 @@ cp config.example.py config.py
 
 ### Таймаут при запуске
 
-При большом каталоге (1000+ товаров) скрипт может работать долго из-за поштовой загрузки данных по каждому товару. Это нормально — каждый товар требует 3 API-запроса (данные + варианты + изображения).
+При большом каталоге (1000+ товаров) скрипт может работать долго из-за пошаговой загрузки данных по каждому товару. Это нормально — каждый товар требует 3 API-запроса (данные + варианты + изображения).
 
 ### CSV не импортируется в WooCommerce
 
@@ -410,7 +410,7 @@ python3 test_migrate.py
 
 Тесты проверяют логику конвертации данных без реальных запросов к API.
 
-### Контрибьюция
+### Участие в проекте
 
 1. Fork репозиторий
 2. Создайте ветку: `git checkout -b feature/my-feature`
@@ -438,7 +438,7 @@ python3 test_migrate.py
 GNU General Public License v3.0 — см. [LICENSE](LICENSE).
 
 ```
-Экспорт товаров из InSales в Woocommerce (WordPress)
+Экспорт товаров из InSales в WooCommerce (WordPress)
 Copyright (C) 2026 Vladislav Chubuk <chubuk@gmail.com>
 
 This program is free software: you can redistribute it and/or modify

@@ -371,7 +371,7 @@ def load_enriched_product(base_url, product_id):
 
 
 def build_category_tree(categories):
-    """Построить дерево категорий и маппинг id → путь."""
+    """Построить дерево категорий и соответствие id → путь."""
     by_id = {c["id"]: c for c in categories}
     paths = {}
 
